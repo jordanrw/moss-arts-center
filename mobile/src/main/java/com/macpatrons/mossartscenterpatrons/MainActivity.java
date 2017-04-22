@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     EditText usernameField, passwordField;
     Button loginButton;
+    JSONParser jsonParser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         loginButton = (Button) findViewById(R.id.loginButton);
 
         loginButton.setOnClickListener(this);
-
 
     }
 

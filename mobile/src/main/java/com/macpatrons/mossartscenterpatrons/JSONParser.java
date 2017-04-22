@@ -20,7 +20,6 @@ public class JSONParser extends Activity {
     JSONObject jsonObject;
 
     String jsonStringToParse;
-    Activity activity;
     Context mContext;
 
     public JSONParser(Context context) {
