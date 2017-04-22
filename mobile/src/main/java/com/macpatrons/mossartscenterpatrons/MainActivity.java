@@ -47,35 +47,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
 
             case R.id.loginButton:
-                try {
-                    JSONObject testing = new JSONObject(loadJSONFromAsset(this));
 
-
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
                 break;
         }
     }
 
-    /**
-     * Open the JSON file for parsing
-     */
-    public String loadJSONFromAsset(Context context) {
-        String json = null;
-        try {
-
-            InputStream is = context.getAssets().open("userprofiles.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            json = new String(buffer, "UTF-8");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-        return json;
-    }
 }
