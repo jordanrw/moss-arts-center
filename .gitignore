@@ -29,6 +29,7 @@ build/
 # Local configuration file (sdk path, etc)
 local.properties
 .properties
+.idea/workspace.xml
 
 #Log Files
 *.log
