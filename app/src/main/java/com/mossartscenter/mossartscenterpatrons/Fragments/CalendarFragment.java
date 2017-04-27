@@ -1,4 +1,4 @@
-package com.mossartscenter.navdrawer.Fragments;
+package com.mossartscenter.mossartscenterpatrons.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.mossartscenter.navdrawer.R;
+import com.mossartscenter.mossartscenterpatrons.R;
 
 /**
  * Created by Jordan on 4/22/17.

@@ -1,4 +1,4 @@
-package com.mossartscenter.navdrawer.Fragments;
+package com.mossartscenter.mossartscenterpatrons.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;

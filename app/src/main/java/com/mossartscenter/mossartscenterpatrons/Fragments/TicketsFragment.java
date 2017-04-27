@@ -1,4 +1,4 @@
-package com.mossartscenter.navdrawer.Fragments;
+package com.mossartscenter.mossartscenterpatrons.Fragments;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -8,16 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.mossartscenter.navdrawer.R;
+import com.mossartscenter.mossartscenterpatrons.R;
 
 /**
  * Created by Jordan on 4/22/17.
  */
 
-public class SuggestionsFragment extends Fragment implements View.OnClickListener {
+public class TicketsFragment extends Fragment implements View.OnClickListener {
     TextView label;
 
-    public void SuggestionsFragment() {
+    public void TicketsFragment() {
 
     }
 
@@ -25,9 +25,9 @@ public class SuggestionsFragment extends Fragment implements View.OnClickListene
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(R.layout.fragment_suggestions, container, false);
+        View view = inflater.inflate(R.layout.fragment_tickets, container, false);
 
-        label = (TextView) view.findViewById(R.id.suggestionsTitle);
+        label = (TextView) view.findViewById(R.id.ticketsTitle);
 
         return view;
     }

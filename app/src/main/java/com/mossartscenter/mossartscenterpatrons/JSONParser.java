@@ -1,4 +1,4 @@
-package com.mossartscenter.navdrawer;
+package com.mossartscenter.mossartscenterpatrons;
 
 import android.app.Activity;
 import android.content.Context;

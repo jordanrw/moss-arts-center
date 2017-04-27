@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mossartscenter.navdrawer.com.macpatrons.mossartscenterpatrons.ShowFragment">
+    tools:context="com.mossartscenter.mossartscenterpatrons.com.macpatrons.mossartscenterpatrons.ShowFragment">
 
     <TextView
         android:id="@+id/showTitle"
