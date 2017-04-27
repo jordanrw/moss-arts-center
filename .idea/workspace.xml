@@ -10,9 +10,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36f9177b-18a2-4a98-9d0a-0f7d118d550a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="36f9177b-18a2-4a98-9d0a-0f7d118d550a" name="Default" comment="" />
     <ignored path="Moss Arts Center Patrons.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -2805,9 +2803,9 @@
         <option value="$PROJECT_DIR$/mobile/src/main/java/com/macpatrons/mossartscenterpatrons/CustomPagerAdapter.java" />
         <option value="$PROJECT_DIR$/mobile/src/main/java/com/macpatrons/mossartscenterpatrons/JSONParser.java" />
         <option value="$PROJECT_DIR$/mobile/src/main/java/com/macpatrons/mossartscenterpatrons/ShowParserJSON.java" />
-        <option value="$PROJECT_DIR$/mobile/src/main/assets/showinfo.json" />
         <option value="$PROJECT_DIR$/mobile/src/main/java/com/macpatrons/mossartscenterpatrons/MainActivity.java" />
         <option value="$PROJECT_DIR$/mobile/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/mobile/src/main/assets/showinfo.json" />
       </list>
     </option>
   </component>
