@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/calendar_black_24dp"
+            android:title="Calendar" />
+        <item
+            android:id="@+id/nav_tickets"
+            android:icon="@drawable/ticket_black_24dp"
+            android:title="Tickets" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_suggestions"
+            android:icon="@drawable/suggestion2_black_24dp"
+            android:title="Suggestions" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/history_black_24dp"
+            android:title="History" />
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/settings_black_24dp"
+            android:title="Settings" >
+        </item>
+    </group>
+
+</menu>
