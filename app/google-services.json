@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1016115738428",
+    "firebase_url": "https://mossartscenterpatrons.firebaseio.com",
+    "project_id": "mossartscenterpatrons",
+    "storage_bucket": "mossartscenterpatrons.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016115738428:android:e341766cf8e07919",
+        "android_client_info": {
+          "package_name": "com.mossartscenter.mossartscenterpatrons"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016115738428-o0kblkonfnmmmq0pc5qh9e8am110p1hu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGvy10Tzz3LIjCDs5j-h8Plnaagz3mES8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
