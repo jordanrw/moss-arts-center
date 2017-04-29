@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mossartscenter.mossartscenterpatrons">
 
-    
+
 
     <application
         android:allowBackup="true"
@@ -11,6 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ticket" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
         <activity
             android:name="com.mossartscenter.mossartscenterpatrons.MainActivity"
             android:label="@string/app_name"
@@ -25,6 +34,7 @@
         <service android:name=".FirebaseNotificationService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
+
             </intent-filter>
         </service>
     </application>
