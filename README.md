@@ -1,1 +1,1 @@
-# android-nav-drawer-template
+This is the Patron application for the Moss Arts Center.
