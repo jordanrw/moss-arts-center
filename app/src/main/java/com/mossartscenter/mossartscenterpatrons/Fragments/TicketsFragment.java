@@ -54,16 +54,20 @@ public class TicketsFragment extends Fragment {
      * ARE DISPLAYED
      * POPULATE DATA OBJECTS WITH THE PARENT DATA RETURNED FROM JSON FILES
      */
-    private String[] dataObjects = new String[]{"Belonging",
+    private String[] dataObjects = new String[]{"SouthwestVirginiaBallet",
             "StuartPimslerDanceandTheater",
             "NewYorkGilbertandSullivanPlayers"};
 
+    /**
+     * QR codes can be retrieved from the Firebase server
+     */
     private String[] ticketCode = new String[]{"qrcode1", "qrcode2", "qrcode3"};
 
     private BaseAdapter mAdapter = new BaseAdapter() {
 
         /**
          * THIS DETERMINES HOW MANY TICKETS TO DISPLAY ON THE SCREEN
+         * @Prereq - dataObjects must match ticketCode in length.
          * @return
          */
         @Override
