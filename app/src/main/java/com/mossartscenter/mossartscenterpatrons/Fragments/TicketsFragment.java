@@ -26,7 +26,7 @@ import com.mossartscenter.mossartscenterpatrons.ShowParserJSON;
  * Created by Jordan on 4/22/17.
  */
 
-public class TicketsFragment extends Fragment implements View.OnClickListener {
+public class TicketsFragment extends Fragment {
 
     HorizontalListView listView;
     ShowParserJSON showParserJSON = new ShowParserJSON(MainActivity.contextVar);
@@ -92,22 +92,11 @@ public class TicketsFragment extends Fragment implements View.OnClickListener {
             TextView desc = (TextView) retval.findViewById(R.id.showDescription);
             desc.setText(showParserJSON.getDescription((dataObjects[position])));
 
-
             ImageView image = (ImageView) retval.findViewById(R.id.image);
             int bitmapResourceID = getResources().getIdentifier(ticketCode[position], "drawable", getContext().getPackageName());
-
             image.setImageResource(bitmapResourceID);
-
-
 
             return retval;
         }
-
     };
-
-
-    @Override
-    public void onClick(View v) {
-
-    }
 }
