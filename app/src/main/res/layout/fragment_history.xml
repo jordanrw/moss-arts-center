@@ -5,12 +5,11 @@
     android:layout_height="match_parent"
     tools:context="com.mossartscenter.mossartscenterpatrons.Fragments.HistoryFragment">
 
-    <TextView
-        android:id="@+id/historyTitle"
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="History"
-        android:layout_gravity="center"
-        android:padding="10dp"/>
+        android:id="@id/android:list">
+
+    </ListView>
 
 </FrameLayout>
