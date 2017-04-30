@@ -1,5 +1,6 @@
 package com.mossartscenter.mossartscenterpatrons;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -21,10 +22,15 @@ import com.mossartscenter.mossartscenterpatrons.Fragments.TicketsFragment;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    public static Context contextVar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(com.mossartscenter.mossartscenterpatrons.R.layout.activity_main);
+
+        contextVar = getApplicationContext();
 
         Toolbar toolbar = (Toolbar) findViewById(com.mossartscenter.mossartscenterpatrons.R.id.toolbar);
         setSupportActionBar(toolbar);

@@ -3,22 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context="com.mossartscenter.mossartscenterpatrons.Fragments.TicketsFragment">
 
-    <HorizontalScrollView
-        android:id="@+id/horizontal_scroll"
+    <com.mossartscenter.mossartscenterpatrons.HorizontalListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:layout_height="match_parent"
+        android:id="@+id/listView"
+        >
 
-        <LinearLayout
-            android:id="@+id/linear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-        </LinearLayout>
-
-    </HorizontalScrollView>
+    </com.mossartscenter.mossartscenterpatrons.HorizontalListView>
 
 </FrameLayout>
