@@ -154,8 +154,8 @@ public class JSONParser extends Activity {
                 JSONObject p = historyArray.getJSONObject(i);
                 String title = p.getString("title");
                 String date = p.getString("date");
-                history.put("title", title);
-                history.put("date", date);
+                history.put("title" + i, title);
+                history.put("date" + i, date);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
