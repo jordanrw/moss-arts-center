@@ -10,13 +10,21 @@
             android:layout_height="100dp"
             android:id="@+id/historyImage"
             android:src="@drawable/qrcode1"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:focusableInTouchMode="false"
+            android:scaleType="centerCrop"
+            android:clickable="false"
+            android:focusable="false"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/historyTitle"
             android:text="Title"
-            android:textSize="15dp"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:clickable="false"
             android:layout_toRightOf="@id/historyImage"/>
         <TextView
             android:layout_width="wrap_content"
@@ -25,6 +33,9 @@
             android:text="Date"
             android:textSize="12dp"
             android:textStyle="italic|bold"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:clickable="false"
             android:layout_toRightOf="@id/historyImage"
             android:layout_below="@id/historyTitle"/>
     </RelativeLayout>

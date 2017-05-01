@@ -1,6 +1,7 @@
 package com.mossartscenter.mossartscenterpatrons;
 
 import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.FragmentManager;
@@ -19,11 +20,12 @@ import com.mossartscenter.mossartscenterpatrons.Fragments.CalendarFragment;
 import com.mossartscenter.mossartscenterpatrons.Fragments.HistoryFragment;
 import com.mossartscenter.mossartscenterpatrons.Fragments.HomeFragment;
 import com.mossartscenter.mossartscenterpatrons.Fragments.SettingsFragment;
+import com.mossartscenter.mossartscenterpatrons.Fragments.ShowFragment;
 import com.mossartscenter.mossartscenterpatrons.Fragments.SuggestionsFragment;
 import com.mossartscenter.mossartscenterpatrons.Fragments.TicketsFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, ShowFragment.OnFragmentInteractionListener {
 
     public static Context contextVar;
     private float previousScreenBrightness;
@@ -145,5 +147,10 @@ public class MainActivity extends AppCompatActivity
     private void previousBrightness() {
         layout.screenBrightness = previousScreenBrightness;
         getWindow().setAttributes(layout);
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }

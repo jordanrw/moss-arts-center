@@ -4,11 +4,15 @@ import android.app.ListActivity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
 import android.support.v4.widget.SimpleCursorAdapter;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -23,7 +27,7 @@ import java.util.HashMap;
  * Created by Jordan on 4/22/17.
  */
 
-public class HistoryFragment extends ListFragment implements View.OnClickListener {
+public class HistoryFragment extends ListFragment implements View.OnClickListener{
     TextView label;
     JSONParser jsonParser;
     ListView listView;
@@ -52,13 +56,15 @@ public class HistoryFragment extends ListFragment implements View.OnClickListene
             listItems.add(history.get("title" + i));
             dateItems.add(history.get("date" + i));
         }
-        simpleArrayAdapter = new MySimpleArrayAdapter(getContext(), listItems, dateItems);
+        simpleArrayAdapter = new MySimpleArrayAdapter(getContext(), listItems, dateItems, HistoryFragment.this);
         listView.setAdapter(simpleArrayAdapter);
+        listView.setItemsCanFocus(true);
         return view;
     }
 
     @Override
     public void onClick(View v) {
+
     }
 
 }
