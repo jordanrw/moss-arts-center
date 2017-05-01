@@ -47,7 +47,7 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Buy Tickets"
+                android:text="Give Feedback"
                 android:background="@color/colorPrimary"
                 android:textColor="#ffff"
                 android:padding="10dp"
