@@ -1,14 +1,19 @@
 package com.mossartscenter.mossartscenterpatrons;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class FeedbackActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button submit, cancel;
+
+    TextView showTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +24,14 @@ public class FeedbackActivity extends AppCompatActivity implements View.OnClickL
         cancel = (Button) findViewById(R.id.btnCancel);
 
         submit.setOnClickListener(this);
-        cancel = (Button) findViewById(R.id.btnCancel);
+        cancel.setOnClickListener(this);
+
+        Intent myIntent = getIntent();
+        String showTitleString = myIntent.getStringExtra("showString");
+        System.out.println(showTitleString + "RECIEVED");
+
+        showTitle = (TextView) findViewById(R.id.etShowTitle);
+        showTitle.setText(showTitleString);
     }
 
     @Override
