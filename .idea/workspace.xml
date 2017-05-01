@@ -10,18 +10,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36f9177b-18a2-4a98-9d0a-0f7d118d550a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/mossartscenter/mossartscenterpatrons/Fragments/ShowFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_show2.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/mossartscenter/mossartscenterpatrons/Show.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/showinfo.json" afterPath="$PROJECT_DIR$/app/src/main/assets/showinfo.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mossartscenter/mossartscenterpatrons/Fragments/HistoryFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mossartscenter/mossartscenterpatrons/Fragments/HistoryFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mossartscenter/mossartscenterpatrons/Fragments/MySimpleArrayAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mossartscenter/mossartscenterpatrons/Fragments/MySimpleArrayAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mossartscenter/mossartscenterpatrons/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mossartscenter/mossartscenterpatrons/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/row.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/row.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-    </list>
+    <list default="true" id="36f9177b-18a2-4a98-9d0a-0f7d118d550a" name="Default" comment="" />
     <ignored path="Moss Arts Center Patrons.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
