@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    Jordan
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/heroImage"
+            android:layout_width="match_parent"
+            android:layout_height="205dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/current_gallery" />
+        <TextView
+            android:id="@+id/heroImageDescriptor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingLeft="20dp"
+            android:text="Hero Image Descriptor"
+            android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/heroTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="168dp"
+            android:paddingLeft="20dp"
+            android:text="Title"
+            android:textAppearance="@android:style/TextAppearance.Material.Headline"
+            android:textColor="@android:color/white"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/heroDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="210dp"
+            android:paddingLeft="20dp"
+            android:text="Time and Date"
+            android:textAppearance="@android:style/TextAppearance.Material.Body2"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/home_description1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_below="@+id/heroDate"
+            android:paddingTop="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="15dp"
+            android:text="Show Description"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+    </RelativeLayout>
+
+</LinearLayout>
