@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.mossartscenter.mossartscenterpatrons.R;
 import com.mossartscenter.mossartscenterpatrons.ShowParserJSON;
@@ -51,6 +52,8 @@ public class CalendarListFragment extends ListFragment {
         listView = (ListView) view.findViewById(android.R.id.list);
         listView.setAdapter(mySimpleArrayAdapter);
         listView.setItemsCanFocus(true);
+        Toast.makeText(getActivity(), "Now Showing: 2016 - 2017 Season",
+                Toast.LENGTH_LONG).show();
         return view;
 
 
