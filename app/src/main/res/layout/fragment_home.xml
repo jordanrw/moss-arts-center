@@ -12,7 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <FrameLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="168dp"
                     android:paddingLeft="20dp"
-                    android:text="Susan Danko"
+                    android:text="Title"
                     android:textAppearance="@android:style/TextAppearance.Material.Headline"
                     android:textColor="@android:color/white"
                     android:textSize="35dp"
@@ -57,15 +57,16 @@
                     android:id="@+id/home_description1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="230dp"
                     android:layout_marginBottom="30dp"
+                    android:layout_below="@+id/home_date1"
+                    android:paddingTop="5dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="15dp"
                     android:text="The beauty and vulnerability of the natural landscape is the source of inspiration for Susan Danko’s evocative paintings. Rendered with fluid swaths of rich, often bold color, her paintings depict dreamy, almost surreal scenes nonetheless tinged with the ever-growing reality of environmental vulnerability."
                     android:textAppearance="@android:style/TextAppearance.Material.Body1" />
-            </FrameLayout>
+            </RelativeLayout>
 
-            <FrameLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
@@ -90,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="168dp"
                     android:paddingLeft="20dp"
-                    android:text="Trumpets"
+                    android:text="Title"
                     android:textAppearance="@android:style/TextAppearance.Material.Headline"
                     android:textColor="@android:color/white"
                     android:textSize="35dp"
@@ -110,14 +111,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="30dp"
-                    android:layout_marginTop="230dp"
+                    android:layout_below="@+id/home_date2"
+                    android:paddingTop="5dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="15dp"
                     android:text="The beauty and vulnerability of the natural landscape is the source of inspiration for Susan Danko’s evocative paintings. Rendered with fluid swaths of rich, often bold color, her paintings depict dreamy, almost surreal scenes nonetheless tinged with the ever-growing reality of environmental vulnerability."
                     android:textAppearance="@android:style/TextAppearance.Material.Body1" />
-            </FrameLayout>
+            </RelativeLayout>
 
-            <FrameLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
@@ -142,7 +144,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="168dp"
                     android:paddingLeft="20dp"
-                    android:text="Other Event"
+                    android:text="Title"
                     android:textAppearance="@android:style/TextAppearance.Material.Headline"
                     android:textColor="@android:color/white"
                     android:textSize="35dp"
@@ -161,13 +163,14 @@
                     android:id="@+id/home_description3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="230dp"
                     android:layout_marginBottom="30dp"
+                    android:layout_below="@+id/home_date3"
+                    android:paddingTop="5dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="15dp"
                     android:text="The beauty and vulnerability of the natural landscape is the source of inspiration for Susan Danko’s evocative paintings. Rendered with fluid swaths of rich, often bold color, her paintings depict dreamy, almost surreal scenes nonetheless tinged with the ever-growing reality of environmental vulnerability."
                     android:textAppearance="@android:style/TextAppearance.Material.Body1" />
-            </FrameLayout>
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 
