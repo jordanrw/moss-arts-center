@@ -3,6 +3,7 @@
     package="com.mossartscenter.mossartscenterpatrons">
 
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/moss_logo"
         android:label="@string/app_name"
@@ -17,9 +18,10 @@
             android:resource="@color/colorAccent" />
 
         <activity
-            android:name=".LoginActivity">
-      <!--      android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">-->
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait">
+            <!--      android:label="@string/app_name"
+                  android:theme="@style/AppTheme.NoActionBar">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,14 +35,18 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".FeedbackActivity" />
-        <activity android:name=".BuyTicketActivity"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".FeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BuyTicketActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
-
-            />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
