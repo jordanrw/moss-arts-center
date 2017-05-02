@@ -54,8 +54,8 @@ public class TicketsFragment extends Fragment {
      * ARE DISPLAYED
      * POPULATE DATA OBJECTS WITH THE PARENT DATA RETURNED FROM JSON FILES
      */
-    private String[] dataObjects = new String[]{"SouthwestVirginiaBallet",
-            "StuartPimslerDanceandTheater",
+    private String[] dataObjects = new String[]{"StuartPimslerDanceandTheater",
+            "WhatBends",
             "NewYorkGilbertandSullivanPlayers"};
 
     /**
