@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mossartscenter.mossartscenterpatrons">
 
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,19 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ticket" />
-
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
 
         <activity
-            android:name="com.mossartscenter.mossartscenterpatrons.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".LoginActivity">
+      <!--      android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,9 +30,16 @@
         <service android:name=".FirebaseNotificationService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
-
             </intent-filter>
         </service>
+
+        <activity android:name=".FeedbackActivity" />
+        <activity android:name=".BuyTicketActivity" />
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+
+            />
     </application>
 
 </manifest>

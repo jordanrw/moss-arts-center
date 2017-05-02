@@ -14,7 +14,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.mossartscenter.mossartscenterpatrons.Fragments.CalendarFragment;
 import com.mossartscenter.mossartscenterpatrons.Fragments.HistoryFragment;
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity
     public static Context contextVar;
     private float previousScreenBrightness;
 
+    JSONParser jsonParser;
     WindowManager.LayoutParams layout;
 
     @Override
@@ -38,8 +41,13 @@ public class MainActivity extends AppCompatActivity
 
         setContentView(com.mossartscenter.mossartscenterpatrons.R.layout.activity_main);
 
+        jsonParser = new JSONParser(this, "userprofiles");
+
         layout = getWindow().getAttributes();
 
+        /**
+         * Grab current screen brightness
+         */
         contextVar = getApplicationContext();
         try {
             previousScreenBrightness = Settings.System.getInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS);
@@ -62,13 +70,22 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(0).setChecked(true);
 
+
+        View header = navigationView.getHeaderView(0);
+        TextView profileName = (TextView) header.findViewById(R.id.profileName);
+        TextView profileEmail = (TextView) header.findViewById(R.id.profileEmail);
+
         // Load the Home Fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         HomeFragment homeFrag = new HomeFragment();
         transaction.replace(com.mossartscenter.mossartscenterpatrons.R.id.fragment_container, homeFrag);
         transaction.commit();
+
+        profileName.setText(jsonParser.getPerson("Patron1"));
+        profileEmail.setText(jsonParser.getEmail("Patron1"));
     }
+
 
     @Override
     public void onBackPressed() {

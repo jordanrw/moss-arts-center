@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mossartscenter.mossartscenterpatrons.HorizontalListView;
+import com.mossartscenter.mossartscenterpatrons.JSONParser;
 import com.mossartscenter.mossartscenterpatrons.MainActivity;
 import com.mossartscenter.mossartscenterpatrons.R;
 import com.mossartscenter.mossartscenterpatrons.ShowParserJSON;
@@ -29,7 +30,7 @@ import com.mossartscenter.mossartscenterpatrons.ShowParserJSON;
 public class TicketsFragment extends Fragment {
 
     HorizontalListView listView;
-    ShowParserJSON showParserJSON = new ShowParserJSON(MainActivity.contextVar);
+    ShowParserJSON showParserJSON = new ShowParserJSON(MainActivity.contextVar, "showinfo");
 
     public void TicketsFragment() {
 
@@ -54,8 +55,8 @@ public class TicketsFragment extends Fragment {
      * ARE DISPLAYED
      * POPULATE DATA OBJECTS WITH THE PARENT DATA RETURNED FROM JSON FILES
      */
-    private String[] dataObjects = new String[]{"SouthwestVirginiaBallet",
-            "StuartPimslerDanceandTheater",
+    private String[] dataObjects = new String[]{"StuartPimslerDanceandTheater",
+            "WhatBends",
             "NewYorkGilbertandSullivanPlayers"};
 
     /**
@@ -93,8 +94,6 @@ public class TicketsFragment extends Fragment {
             title.setText(showParserJSON.getTitle(dataObjects[position]));
             TextView time = (TextView) retval.findViewById(R.id.showTime);
             time.setText(showParserJSON.getDate(dataObjects[position]));
-            TextView desc = (TextView) retval.findViewById(R.id.showDescription);
-            desc.setText(showParserJSON.getDescription((dataObjects[position])));
 
             ImageView image = (ImageView) retval.findViewById(R.id.image);
             int bitmapResourceID = getResources().getIdentifier(ticketCode[position], "drawable", getContext().getPackageName());
