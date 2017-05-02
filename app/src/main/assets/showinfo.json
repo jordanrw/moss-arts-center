@@ -52,7 +52,15 @@
     "date": "Friday, May 5th 2017 at 7:30PM",
     "location": "Moss Arts Center",
     "price": "$40 - $75, $10 for students with ID and children 18 and under.",
-    "description": "“ Pinafore will sweep you away.”\n—The New York Post\n\nRide a wave of music and laughter as a romantic cast of characters sings and dances their way across the deck of the fanciful British naval vessel with the improbable name.\n\nH.M.S. Pinafore, or The Lass That Loved A Sailor, was first performed at London’s Opera Comique on May 25, 1878, and has remained popular on both sides of the Atlantic ever since. The New York Gilbert & Sullivan Players’ production features an elaborate setting of a ship’s deck, based on drawings by Gilbert himself, and beautiful Belle Epoch costumes.\n\nGet ready for an evening filled with the lush sounds of voices and a full orchestra in the pit, lively action and choreography, and broad comedy true to Gilbert & Sullivan tradition.",
+    "description": "“Pinafore will sweep you away.”\n—The New York Post\n\nRide a wave of music and laughter as a romantic cast of characters sings and dances their way across the deck of the fanciful British naval vessel with the improbable name.\n\nH.M.S. Pinafore, or The Lass That Loved A Sailor, was first performed at London’s Opera Comique on May 25, 1878, and has remained popular on both sides of the Atlantic ever since. The New York Gilbert & Sullivan Players’ production features an elaborate setting of a ship’s deck, based on drawings by Gilbert himself, and beautiful Belle Epoch costumes.\n\nGet ready for an evening filled with the lush sounds of voices and a full orchestra in the pit, lively action and choreography, and broad comedy true to Gilbert & Sullivan tradition.",
     "category": "Dance"
+  },
+  "WhatBends": {
+    "title": "What Bends\nSchool of Performing Arts",
+    "date": "Saturday, May 6th, 2017 at 1PM, 7:30PM, and 8:30PM",
+    "location": "Cube",
+    "price": "Free, ticketed for limited seating",
+    "description": "Zachary Duer, video\nErika Meitner, poetry\nCharles Nichols, music\nRachel Rugh, choreography\nwith dancers Barbara Allie, Katy Gaines, and Eric Mullis\n\nWhat Bends is a multimedia performance that explores life in Appalachia. This topic is investigated through the medium of cutting edge technologies in the Moss Arts Center Cube, incorporating 360° immersive video projection, live spatial audio musical performance with electric violin and computer, multiple dancers with real-time video and audio interaction, and live processed spoken poetry.\n\nThe performance is approximately 25 minutes long.\n\nThis project sponsored by the Institute for Creativity, Arts, and Technology.",
+    "category": "Technology"
   }
 }
