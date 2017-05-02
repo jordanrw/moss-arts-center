@@ -1,15 +1,19 @@
 package com.mossartscenter.mossartscenterpatrons.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.mossartscenter.mossartscenterpatrons.FeedbackActivity;
+import com.mossartscenter.mossartscenterpatrons.MainActivity;
 import com.mossartscenter.mossartscenterpatrons.R;
 import com.mossartscenter.mossartscenterpatrons.ShowParserJSON;
 
@@ -21,7 +25,7 @@ import com.mossartscenter.mossartscenterpatrons.ShowParserJSON;
  * Use the {@link ShowFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ShowFragment extends Fragment {
+public class ShowFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -33,6 +37,8 @@ public class ShowFragment extends Fragment {
     TextView showDate;
     TextView showDescription;
     View rootView;
+    Button feedback;
+    String showString;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -81,8 +87,10 @@ public class ShowFragment extends Fragment {
         showTitle = (TextView) rootView.findViewById(R.id.myShowTitle);
         showDate = (TextView) rootView.findViewById(R.id.myShowDate);
         showDescription = (TextView) rootView.findViewById(R.id.myShowDescription);
+        feedback = (Button) rootView.findViewById(R.id.feedback);
+        feedback.setOnClickListener(this);
         ShowParserJSON showParserJSON = new ShowParserJSON(getContext());
-        String showString = "";
+        showString = "";
         if (showNumber == 1) {
             showString = "RoanokeSymphonyOrchestra";
             showImage.setImageResource(R.drawable.orchestra);
@@ -138,6 +146,19 @@ public class ShowFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.feedback:
+                // Pass the show title onto the feedback activity
+                Intent intent = new Intent(getActivity(), FeedbackActivity.class);
+                intent.putExtra("showString", showTitle.getText().toString());
+                System.out.println(showTitle.getText().toString());
+                startActivity(intent);
+                break;
+        }
     }
 
     /**

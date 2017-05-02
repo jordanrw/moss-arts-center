@@ -73,6 +73,7 @@ public class MySimpleArrayAdapter extends ArrayAdapter<String> {
                 showFragment.setArguments(bundle);
                 transaction.replace(com.mossartscenter.mossartscenterpatrons.R.id.fragment_container, showFragment);
                 transaction.commit();
+                transaction.addToBackStack(null);
             }
 
         });

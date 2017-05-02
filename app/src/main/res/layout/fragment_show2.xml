@@ -3,58 +3,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.mossartscenter.mossartscenterpatrons.Fragments.ShowFragment">
-    <ScrollView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/showImage"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:scaleType="centerCrop"
-                android:id="@+id/showImage"/>
+            android:layout_height="150dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/myShowTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:padding="10dp"
+            android:text="Insert Title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/myShowDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:padding="10dp"
+            android:text="Insert Date"
+            android:textSize="20dp"
+            android:textStyle="italic|bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:paddingBottom="8dp">
+
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Insert Title"
-                android:textSize="35dp"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:id="@+id/myShowTitle"
-                android:padding="10dp"
-                android:layout_marginBottom="7dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Insert Date"
-                android:textStyle="italic|bold"
-                android:textSize="20dp"
-                android:padding="10dp"
-                android:layout_marginBottom="7dp"
-                android:id="@+id/myShowDate"/>
-            <TextView
+                android:id="@+id/myShowDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Insert Description"
-                android:textSize="15dp"
-                android:padding="10dp"
                 android:layout_marginBottom="7dp"
-                android:id="@+id/myShowDescription"
-                />
-            <Button
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Give Feedback"
-                android:background="@color/colorPrimary"
-                android:textColor="#ffff"
                 android:padding="10dp"
-                android:layout_marginBottom="10dp"
-                android:textStyle="bold"/>
-        </LinearLayout>
-    </ScrollView>
+                android:text="Insert Description"
+                android:textSize="15dp" />
+        </ScrollView>
 
 
+        <Button
+
+            android:id="@+id/feedback"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+
+            android:background="@color/colorPrimary"
+
+            android:text="Give Feedback"
+            android:textColor="#ffff"
+            android:textStyle="bold" />
+    </LinearLayout>
 </FrameLayout>

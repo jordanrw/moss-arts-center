@@ -54,8 +54,8 @@ public class TicketsFragment extends Fragment {
      * ARE DISPLAYED
      * POPULATE DATA OBJECTS WITH THE PARENT DATA RETURNED FROM JSON FILES
      */
-    private String[] dataObjects = new String[]{"SouthwestVirginiaBallet",
-            "StuartPimslerDanceandTheater",
+    private String[] dataObjects = new String[]{"StuartPimslerDanceandTheater",
+            "WhatBends",
             "NewYorkGilbertandSullivanPlayers"};
 
     /**
@@ -93,8 +93,6 @@ public class TicketsFragment extends Fragment {
             title.setText(showParserJSON.getTitle(dataObjects[position]));
             TextView time = (TextView) retval.findViewById(R.id.showTime);
             time.setText(showParserJSON.getDate(dataObjects[position]));
-            TextView desc = (TextView) retval.findViewById(R.id.showDescription);
-            desc.setText(showParserJSON.getDescription((dataObjects[position])));
 
             ImageView image = (ImageView) retval.findViewById(R.id.image);
             int bitmapResourceID = getResources().getIdentifier(ticketCode[position], "drawable", getContext().getPackageName());
