@@ -1,0 +1,26 @@
+{
+  "current-gallery": {
+    "title": "Susan Danko",
+    "date": "Thursday, April 13 - Saturday, June 3, 2017",
+    "location": "Moss Arts Center",
+    "price": "Free",
+    "description": "The beauty and vulnerability of the natural landscape is the source of inspiration for Susan Danko’s evocative paintings. Rendered with fluid swaths of rich, often bold color, her paintings depict dreamy, almost surreal scenes nonetheless tinged with the ever-growing reality of environmental vulnerability.",
+    "category": "Gallery"
+  },
+   "next-show": {
+    "title": "Festival of Bands",
+    "date": "Sunday, April 30, 2017, 1-6 PM",
+    "location": "Moss Arts Center",
+    "price": "$20 general admission, $10 students with ID and children 18 an under",
+    "description": "Enjoy a full afternoon of Virginia Tech band music with the Campus Band, Symphony Band, Wind Ensemble, and Highty-Tighties in this School of Performing Arts festival. Come enjoy part or all of this music filled afternoon!",
+    "category": "Music"
+  },
+  "suggested-show": {
+    "title": "Romeo and Juliet",
+    "date": "April 1st at 7:30PM, \nApril 2nd at 3PM 2017.",
+    "location": "Moss Arts Center",
+    "price": "$20 - $55, $10 for students with ID and children 18 and under",
+    "description": "Based on the William Shakespeare classic, with a mesmerizing score by Serge Prokofiev and original chereography by Pedro Szalay, this three-act ballet brings to life the feud between the Houses of Capulet and Montague and the passionate story of two young people who fight, linger, and love until the end",
+    "category": "Dance"
+  }
+}
