@@ -81,7 +81,7 @@ public class ShowFragment extends Fragment {
         showTitle = (TextView) rootView.findViewById(R.id.myShowTitle);
         showDate = (TextView) rootView.findViewById(R.id.myShowDate);
         showDescription = (TextView) rootView.findViewById(R.id.myShowDescription);
-        ShowParserJSON showParserJSON = new ShowParserJSON(getContext());
+        ShowParserJSON showParserJSON = new ShowParserJSON(getContext(), "showinfo");
         String showString = "";
         if (showNumber == 1) {
             showString = "RoanokeSymphonyOrchestra";

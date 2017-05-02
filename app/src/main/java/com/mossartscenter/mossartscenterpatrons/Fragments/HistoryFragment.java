@@ -48,7 +48,7 @@ public class HistoryFragment extends ListFragment implements View.OnClickListene
         View view = inflater.inflate(R.layout.fragment_history, container, false);
         listItems = new ArrayList<>();
         dateItems = new ArrayList<>();
-        jsonParser = new JSONParser(getContext());
+        jsonParser = new JSONParser(getContext(), "userprofiles");
         history = new HashMap();
         listView = (ListView) view.findViewById(android.R.id.list);
         history = jsonParser.getHistory("Patron1");

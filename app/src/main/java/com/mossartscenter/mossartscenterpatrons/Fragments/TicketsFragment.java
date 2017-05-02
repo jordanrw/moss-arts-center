@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mossartscenter.mossartscenterpatrons.HorizontalListView;
+import com.mossartscenter.mossartscenterpatrons.JSONParser;
 import com.mossartscenter.mossartscenterpatrons.MainActivity;
 import com.mossartscenter.mossartscenterpatrons.R;
 import com.mossartscenter.mossartscenterpatrons.ShowParserJSON;
@@ -29,7 +30,7 @@ import com.mossartscenter.mossartscenterpatrons.ShowParserJSON;
 public class TicketsFragment extends Fragment {
 
     HorizontalListView listView;
-    ShowParserJSON showParserJSON = new ShowParserJSON(MainActivity.contextVar);
+    ShowParserJSON showParserJSON = new ShowParserJSON(MainActivity.contextVar, "showinfo");
 
     public void TicketsFragment() {
 
