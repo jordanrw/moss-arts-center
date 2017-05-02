@@ -31,17 +31,11 @@ public class CalendarFragment extends Fragment implements View.OnClickListener {
         super.onCreateView(inflater, container, savedInstanceState);
 
         View view = inflater.inflate(R.layout.fragment_calendar, container, false);
-        button = (Button) view.findViewById(R.id.button);
-        label = (TextView) view.findViewById(R.id.label);
-
-        button.setOnClickListener(this);
 
         return view;
     }
 
     @Override
     public void onClick(View v) {
-        times++;
-        label.setText("Button was tapped " + times + "times");
     }
 }

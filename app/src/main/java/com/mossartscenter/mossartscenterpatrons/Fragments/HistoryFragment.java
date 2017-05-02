@@ -56,7 +56,7 @@ public class HistoryFragment extends ListFragment implements View.OnClickListene
             listItems.add(history.get("title" + i));
             dateItems.add(history.get("date" + i));
         }
-        simpleArrayAdapter = new MySimpleArrayAdapter(getContext(), listItems, dateItems, HistoryFragment.this);
+        simpleArrayAdapter = new MySimpleArrayAdapter(getContext(), listItems, dateItems, HistoryFragment.this, null, 0);
         listView.setAdapter(simpleArrayAdapter);
         listView.setItemsCanFocus(true);
         return view;

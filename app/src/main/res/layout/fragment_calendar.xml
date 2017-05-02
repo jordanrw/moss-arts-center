@@ -4,18 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.mossartscenter.mossartscenterpatrons.Fragments.CalendarFragment">
+    <ListView
+        android:id="@id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button"/>
-    <TextView
-        android:id="@+id/label"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Calendar View"
-        android:layout_gravity="center"
-        android:padding="10dp"/>
+    </ListView>
 
 </FrameLayout>

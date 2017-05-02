@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:id="@+id/calendarImage"
+            android:src="@drawable/qrcode1"
+            android:layout_marginRight="10dp"
+            android:focusableInTouchMode="false"
+            android:scaleType="centerCrop"
+            android:clickable="false"
+            android:focusable="false"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendarDate"
+            android:text="Date"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/calendarImage"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendarTitle"
+            android:text="Title"
+            android:textSize="18dp"
+            android:textStyle="italic"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@id/calendarImage"
+            android:layout_below="@id/calendarDate"/>
+    </RelativeLayout>
+</LinearLayout>
