@@ -1,17 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mossartscenter.mossartscenterpatrons.com.macpatrons.mossartscenterpatrons.ShowFragment">
+    tools:context="com.mossartscenter.mossartscenterpatrons.Fragments.ShowFragment">
 
-    <TextView
-        android:id="@+id/showTitle"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:padding="10dp"
-        android:text="Show Page"
-        android:textAppearance="@android:style/TextAppearance.Material.Display1" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
 
+        <ImageView
+            android:id="@+id/showImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/myShowTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:padding="10dp"
+            android:text="Insert Title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/myShowDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:padding="10dp"
+            android:text="Insert Date"
+            android:textSize="20dp"
+            android:textStyle="italic|bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/myShowDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:padding="10dp"
+                android:text="Insert Description"
+                android:textSize="15dp" />
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/purchaseActivity"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:text="buy tickets"
+            android:textColor="#ffff"
+            android:textStyle="bold" />
+    </LinearLayout>
 </FrameLayout>

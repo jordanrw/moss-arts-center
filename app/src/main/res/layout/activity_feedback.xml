@@ -54,9 +54,9 @@
                 android:hint="Enter your name"></EditText>
 
             <TextView
-                android:paddingTop="20dp"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:paddingTop="20dp"
                 android:text="Email Address"></TextView>
 
             <EditText
@@ -66,10 +66,10 @@
                 android:hint="Enter your email address"></EditText>
 
             <TextView
-                android:paddingTop="20dp"
                 android:id="@+id/tvFeedback"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:paddingTop="20dp"
                 android:text="Feedback"></TextView>
 
             <EditText
@@ -97,9 +97,7 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="#CCC"
-        android:padding="4px">
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/btnSubmit"
@@ -107,17 +105,17 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/colorPrimary"
-            android:textColor="#FFFFFF"
-            android:text="Submit" />
+            android:text="Submit"
+            android:textColor="#FFFFFF" />
 
         <Button
-            android:background="@color/colorPrimary"
             android:id="@+id/btnCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="#FFFFFF"
-            android:text="Cancel" />
+            android:background="@color/colorPrimary"
+            android:text="Cancel"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
 
