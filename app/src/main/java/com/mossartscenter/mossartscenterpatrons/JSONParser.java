@@ -21,10 +21,10 @@ public class JSONParser extends Activity {
     String jsonStringToParse;
     Context mContext;
 
-    public JSONParser(Context context) {
+    public JSONParser(Context context, String jsonFile) {
 
         mContext = context;
-        jsonStringToParse = loadJSONFromAsset(mContext);
+        jsonStringToParse = loadJSONFromAsset(mContext, jsonFile);
         try {
             jsonObject = new JSONObject(jsonStringToParse);
         } catch (JSONException e) {
@@ -168,11 +168,11 @@ public class JSONParser extends Activity {
     /**
      * Open the JSON file for parsing
      */
-    public String loadJSONFromAsset(Context context) {
+    public String loadJSONFromAsset(Context context, String jsonFile) {
         String json = null;
         try {
 
-            InputStream is = context.getAssets().open("userprofiles.json");
+            InputStream is = context.getAssets().open(jsonFile + ".json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
