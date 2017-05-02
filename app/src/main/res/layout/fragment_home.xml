@@ -5,12 +5,170 @@
     android:layout_height="match_parent"
     tools:context="com.mossartscenter.mossartscenterpatrons.Fragments.HomeFragment">
 
-    <TextView
-        android:id="@+id/homeTitle"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Home View"
-        android:layout_gravity="center"
-        android:padding="10dp"/>
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/home_image1"
+                    android:layout_width="match_parent"
+                    android:layout_height="205dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/current_gallery" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="20dp"
+                    android:text="Current Gallery"
+                    android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/home_title1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="168dp"
+                    android:paddingLeft="20dp"
+                    android:text="Susan Danko"
+                    android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                    android:textColor="@android:color/white"
+                    android:textSize="35dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/home_date1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="210dp"
+                    android:paddingLeft="20dp"
+                    android:text="Thursday, April 13-Saturday, June 3, 2017"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body2"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/home_description1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="230dp"
+                    android:layout_marginBottom="30dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="15dp"
+                    android:text="The beauty and vulnerability of the natural landscape is the source of inspiration for Susan Danko’s evocative paintings. Rendered with fluid swaths of rich, often bold color, her paintings depict dreamy, almost surreal scenes nonetheless tinged with the ever-growing reality of environmental vulnerability."
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/home_image2"
+                    android:layout_width="match_parent"
+                    android:layout_height="205dp"
+                    android:src="@drawable/next_show"
+                    android:scaleType="centerCrop"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="20dp"
+                    android:text="Next Show"
+                    android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/home_title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="168dp"
+                    android:paddingLeft="20dp"
+                    android:text="Trumpets"
+                    android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                    android:textColor="@android:color/white"
+                    android:textSize="35dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/home_date2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="210dp"
+                    android:paddingLeft="20dp"
+                    android:text="Thursday, April 13-Saturday, June 3, 2017"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body2"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/home_description2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="230dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="15dp"
+                    android:text="The beauty and vulnerability of the natural landscape is the source of inspiration for Susan Danko’s evocative paintings. Rendered with fluid swaths of rich, often bold color, her paintings depict dreamy, almost surreal scenes nonetheless tinged with the ever-growing reality of environmental vulnerability."
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/home_image3"
+                    android:layout_width="match_parent"
+                    android:layout_height="205dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/suggested_show"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="20dp"
+                    android:text="Suggested Show"
+                    android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/home_title3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="168dp"
+                    android:paddingLeft="20dp"
+                    android:text="Other Event"
+                    android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                    android:textColor="@android:color/white"
+                    android:textSize="35dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/home_date3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="210dp"
+                    android:paddingLeft="20dp"
+                    android:text="Thursday, April 13-Saturday, June 3, 2017"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body2"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/home_description3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="230dp"
+                    android:layout_marginBottom="30dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="15dp"
+                    android:text="The beauty and vulnerability of the natural landscape is the source of inspiration for Susan Danko’s evocative paintings. Rendered with fluid swaths of rich, often bold color, her paintings depict dreamy, almost surreal scenes nonetheless tinged with the ever-growing reality of environmental vulnerability."
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

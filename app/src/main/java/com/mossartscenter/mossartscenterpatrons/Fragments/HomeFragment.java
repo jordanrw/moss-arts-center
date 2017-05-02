@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.mossartscenter.mossartscenterpatrons.R;
+import com.mossartscenter.mossartscenterpatrons.ShowParserJSON;
 
 /**
  * Created by Jordan on 4/22/17.
@@ -16,6 +17,7 @@ import com.mossartscenter.mossartscenterpatrons.R;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
     TextView label;
+    ShowParserJSON parser;
 
     public void HomeFragment() {
 
@@ -26,7 +28,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        label = (TextView) view.findViewById(R.id.homeTitle);
+
+
 
         return view;
     }
