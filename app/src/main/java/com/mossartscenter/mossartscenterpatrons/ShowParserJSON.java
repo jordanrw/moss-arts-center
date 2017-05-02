@@ -20,10 +20,10 @@ public class ShowParserJSON {
     String jsonStringToParse;
     Context mContext;
 
-    public ShowParserJSON(Context context) {
+    public ShowParserJSON(Context context, String jsonFile) {
 
         mContext = context;
-        jsonStringToParse = loadJSONFromAsset(mContext);
+        jsonStringToParse = loadJSONFromAsset(mContext, jsonFile);
         try {
             jsonObject = new JSONObject(jsonStringToParse);
         } catch (JSONException e) {
@@ -107,11 +107,11 @@ public class ShowParserJSON {
     /**
      * Open the JSON file for parsing
      */
-    public String loadJSONFromAsset(Context context) {
+    public String loadJSONFromAsset(Context context, String jsonFile) {
         String json = null;
         try {
 
-            InputStream is = context.getAssets().open("showinfo.json");
+            InputStream is = context.getAssets().open(jsonFile + ".json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);

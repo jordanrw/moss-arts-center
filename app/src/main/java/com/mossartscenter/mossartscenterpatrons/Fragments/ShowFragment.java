@@ -87,10 +87,12 @@ public class ShowFragment extends Fragment implements View.OnClickListener {
         showTitle = (TextView) rootView.findViewById(R.id.myShowTitle);
         showDate = (TextView) rootView.findViewById(R.id.myShowDate);
         showDescription = (TextView) rootView.findViewById(R.id.myShowDescription);
+
         feedback = (Button) rootView.findViewById(R.id.feedback);
         feedback.setOnClickListener(this);
-        ShowParserJSON showParserJSON = new ShowParserJSON(getContext());
-        showString = "";
+        ShowParserJSON showParserJSON = new ShowParserJSON(getContext(), "showinfo");
+        String showString = "";
+
         if (showNumber == 1) {
             showString = "RoanokeSymphonyOrchestra";
             showImage.setImageResource(R.drawable.orchestra);
