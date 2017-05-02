@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.WindowManager;
 
 import com.mossartscenter.mossartscenterpatrons.Fragments.CalendarFragment;
+import com.mossartscenter.mossartscenterpatrons.Fragments.CalendarListFragment;
 import com.mossartscenter.mossartscenterpatrons.Fragments.HistoryFragment;
 import com.mossartscenter.mossartscenterpatrons.Fragments.HomeFragment;
 import com.mossartscenter.mossartscenterpatrons.Fragments.SettingsFragment;
@@ -108,7 +109,7 @@ public class MainActivity extends AppCompatActivity
             getSupportActionBar().setTitle("Moss Arts Center");
         } else if (id == com.mossartscenter.mossartscenterpatrons.R.id.nav_calendar) {
             previousBrightness();
-            CalendarFragment calendarFrag = new CalendarFragment();
+            CalendarListFragment calendarFrag = new CalendarListFragment();
             transaction.replace(com.mossartscenter.mossartscenterpatrons.R.id.fragment_container, calendarFrag);
             transaction.commit();
             getSupportActionBar().setTitle("Calendar");
