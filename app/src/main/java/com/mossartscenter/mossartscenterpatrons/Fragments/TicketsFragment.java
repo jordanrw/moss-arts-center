@@ -56,8 +56,7 @@ public class TicketsFragment extends Fragment {
      * POPULATE DATA OBJECTS WITH THE PARENT DATA RETURNED FROM JSON FILES
      */
     private String[] dataObjects = new String[]{"StuartPimslerDanceandTheater",
-            "WhatBends",
-            "NewYorkGilbertandSullivanPlayers"};
+                        "NewYorkGilbertandSullivanPlayers", "WhatBends"};
 
     /**
      * QR codes can be retrieved from the Firebase server

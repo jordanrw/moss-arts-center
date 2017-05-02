@@ -1,6 +1,7 @@
 package com.mossartscenter.mossartscenterpatrons;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,7 +20,7 @@ public class BuyTicketActivity extends AppCompatActivity implements View.OnClick
     Button purchase, cancel;
     Spinner spinner;
     TextView showtitle, date, price;
-    int total;
+    int total, selection, perTicketPrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,15 +35,14 @@ public class BuyTicketActivity extends AppCompatActivity implements View.OnClick
         price = (TextView) findViewById(R.id.price);
         Integer[] amount = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-        ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_item, amount);
-
+        ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_dropdown_item, amount);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                int selection = (Integer) spinner.getSelectedItem();
-                int perTicketPrice = Integer.parseInt(price.getText().toString());
-                int total = selection * perTicketPrice;
+                selection = (Integer) spinner.getSelectedItem();
+                perTicketPrice = Integer.parseInt(price.getText().toString());
+                total = selection * perTicketPrice;
                 purchase.setText("Purchase ($" + total + ")");
             }
 
@@ -51,20 +51,29 @@ public class BuyTicketActivity extends AppCompatActivity implements View.OnClick
                 // Do nothing here
             }
         });
+
+        Intent myIntent = getIntent();
+        showtitle.setText(myIntent.getStringExtra("showString"));
+        date.setText(myIntent.getStringExtra("date"));
+
         purchase.setOnClickListener(this);
         cancel.setOnClickListener(this);
+
+        selection = (Integer) spinner.getSelectedItem();
+        perTicketPrice = Integer.parseInt(price.getText().toString());
+        total = selection * perTicketPrice;
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.purchase:
-                new AlertDialog.Builder(getApplicationContext())
+                new AlertDialog.Builder(this)
                         .setTitle("Moss Arts Center Patrons")
                         .setMessage("Confirm purchase of $" + total)
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                Toast toast = Toast.makeText(getApplicationContext(), "Purchase request sent for " + showtitle, Toast.LENGTH_LONG);
+                                Toast toast = Toast.makeText(getApplicationContext(), "Purchase request sent for " + showtitle.getText().toString(), Toast.LENGTH_LONG);
                                 toast.show();
                                 finish();
                             }

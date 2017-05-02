@@ -28,7 +28,6 @@ public class FeedbackActivity extends AppCompatActivity implements View.OnClickL
 
         Intent myIntent = getIntent();
         String showTitleString = myIntent.getStringExtra("showString");
-        System.out.println(showTitleString + "RECIEVED");
 
         showTitle = (TextView) findViewById(R.id.etShowTitle);
         showTitle.setText(showTitleString);
