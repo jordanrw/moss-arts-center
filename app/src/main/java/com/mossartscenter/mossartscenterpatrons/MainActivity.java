@@ -137,12 +137,12 @@ public class MainActivity extends AppCompatActivity
             transaction.replace(com.mossartscenter.mossartscenterpatrons.R.id.fragment_container, ticketsFrag);
             transaction.commit();
             getSupportActionBar().setTitle("Tickets");
-        } else if (id == com.mossartscenter.mossartscenterpatrons.R.id.nav_suggestions) {
+       /* } else if (id == com.mossartscenter.mossartscenterpatrons.R.id.nav_suggestions) {
             previousBrightness();
             SuggestionsFragment suggestionsFrag = new SuggestionsFragment();
             transaction.replace(com.mossartscenter.mossartscenterpatrons.R.id.fragment_container, suggestionsFrag);
             transaction.commit();
-            getSupportActionBar().setTitle("Suggestions");
+            getSupportActionBar().setTitle("Suggestions");*/
         } else if (id == com.mossartscenter.mossartscenterpatrons.R.id.nav_history) {
             previousBrightness();
             HistoryFragment historyFrag = new HistoryFragment();

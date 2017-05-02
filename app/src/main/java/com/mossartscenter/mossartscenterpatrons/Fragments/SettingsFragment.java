@@ -1,6 +1,7 @@
 package com.mossartscenter.mossartscenterpatrons.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -13,6 +14,8 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.mossartscenter.mossartscenterpatrons.BuyTicketActivity;
+import com.mossartscenter.mossartscenterpatrons.LoginActivity;
 import com.mossartscenter.mossartscenterpatrons.R;
 
 /**
@@ -59,11 +62,11 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean bChecked) {
                 if (bChecked) {
-                    text.setText("switchOn");
+                    text.setText("We'll send you notifications when rush tickets are available.");
                     editor.putInt("notifications", 1);
                     editor.commit();
                 } else {
-                    text.setText("switchOff");
+                    text.setText("You won't receive any notifications when rush tickets are available.");
                     editor.putInt("notifications", 0);
                     editor.commit();
                 }
@@ -78,6 +81,10 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         if (v.getId() == logoutButton.getId()) {
             // Log out
+            Intent intent = new Intent(getActivity(), LoginActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            getActivity().finish();
         }
     }
 }
