@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mossartscenter.mossartscenterpatrons.BuyTicketActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_weight="1">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerInside"
+        android:background="#555555"
+        android:src="@drawable/maclogo"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:padding="10dp"
+        android:text="Insert Title"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:padding="10dp"
+        android:text="Insert Date"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pricing: $"
+
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            />
+
+    </LinearLayout>
+
+
+
+  <TableLayout
+      android:paddingTop="20dp"
+      android:layout_marginLeft="8dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <TableRow>
+          <TextView
+              android:text="Ticket quantity:"
+              android:textSize="15dp"
+              android:layout_marginRight="8dp">
+
+          </TextView> />
+
+          <Spinner
+              android:layout_weight="1"
+              android:id="@+id/quantity">
+          </Spinner>
+      </TableRow>
+  </TableLayout>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#CCC">
+
+        <Button
+            android:id="@+id/purchase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:textColor="#FFFFFF"
+            android:text="purchase" />
+
+        <Button
+            android:background="@color/colorPrimary"
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="Cancel" />
+    </LinearLayout>
+
+
+</LinearLayout>
+

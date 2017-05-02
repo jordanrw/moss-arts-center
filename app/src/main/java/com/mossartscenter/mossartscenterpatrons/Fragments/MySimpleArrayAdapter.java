@@ -44,7 +44,7 @@ public class MySimpleArrayAdapter extends ArrayAdapter<String> {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         if (type == 0) {
             LayoutInflater inflater = (LayoutInflater) context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -68,10 +68,10 @@ public class MySimpleArrayAdapter extends ArrayAdapter<String> {
                 public void onClick(View v) {
                     Bundle bundle = new Bundle();
                     if (textView.getText().toString().compareTo("Roanoke Symphony Orchestra, Masterworks: Musical Travelogue") == 0) {
-                        bundle.putInt("titleNumber", 1);
+                        bundle.putInt("titleNumber", 0);
                     }
                     else {
-                        bundle.putInt("titleNumber", 4);
+                        bundle.putInt("titleNumber", 3);
                     }
                     FragmentManager fragmentManager = frag.getFragmentManager();
                     FragmentTransaction transaction = fragmentManager.beginTransaction();
@@ -96,6 +96,33 @@ public class MySimpleArrayAdapter extends ArrayAdapter<String> {
             TextView calendarDate = (TextView) rowView.findViewById(R.id.calendarDate);
             final TextView calendarTitle = (TextView) rowView.findViewById(R.id.calendarTitle);
             ImageView calendarImage = (ImageView) rowView.findViewById(R.id.calendarImage);
+            switch (position) {
+                case 0:
+                    calendarImage.setImageResource(R.drawable.orchestracalendar);
+                    break;
+                case 1:
+                    calendarImage.setImageResource(R.drawable.belongingcalendar);
+                    break;
+                case 2:
+                    calendarImage.setImageResource(R.drawable.kidkoalacalendar);
+                    break;
+                case 3:
+                    calendarImage.setImageResource(R.drawable.romeoandjulietcalendar);
+                    break;
+                case 4:
+                    calendarImage.setImageResource(R.drawable.secretagenda23kiddocalendar);
+                    break;
+                case 5:
+                    calendarImage.setImageResource(R.drawable.stuartpimslercalendar);
+                    break;
+                case 6:
+                    calendarImage.setImageResource(R.drawable.gilbertsullivancalendar);
+                    break;
+                case 7:
+                    calendarImage.setImageResource(R.drawable.whatbends);
+                    break;
+
+            }
             String calendarString = dates.get(position);
             int index = calendarString.indexOf(" at ");
             calendarString = calendarString.substring(0, index);
@@ -105,14 +132,11 @@ public class MySimpleArrayAdapter extends ArrayAdapter<String> {
 
                 @Override
                 public void onClick(View v) {
+                    imageNumber = position + 7 % 7;
                     Bundle bundle = new Bundle();
-                    if (calendarTitle.getText().toString().compareTo("Roanoke Symphony Orchestra, Masterworks: Musical Travelogue") == 0) {
-                        bundle.putInt("titleNumber", 1);
-                    }
-                    else {
-                        bundle.putInt("titleNumber", 4);
-                    }
-                    FragmentManager fragmentManager = frag.getFragmentManager();
+                    bundle.putInt("titleNumber", imageNumber);
+                    bundle.putInt("type", 1);
+                    FragmentManager fragmentManager = calendarListFragment.getFragmentManager();
                     FragmentTransaction transaction = fragmentManager.beginTransaction();
                     ShowFragment showFragment = new ShowFragment();
                     showFragment.setArguments(bundle);

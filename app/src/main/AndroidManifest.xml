@@ -33,7 +33,8 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".FeedbackActivity"></activity>
+        <activity android:name=".FeedbackActivity" />
+        <activity android:name=".BuyTicketActivity"></activity>
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.mossartscenter.mossartscenterpatrons.BuyTicketActivity;
 import com.mossartscenter.mossartscenterpatrons.FeedbackActivity;
 import com.mossartscenter.mossartscenterpatrons.MainActivity;
 import com.mossartscenter.mossartscenterpatrons.R;
@@ -39,6 +40,7 @@ public class ShowFragment extends Fragment implements View.OnClickListener {
     View rootView;
     Button feedback;
     String showString;
+    int type;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -93,31 +95,43 @@ public class ShowFragment extends Fragment implements View.OnClickListener {
         ShowParserJSON showParserJSON = new ShowParserJSON(getContext(), "showinfo");
         String showString = "";
 
-        if (showNumber == 1) {
+        if (showNumber == 0) {
             showString = "RoanokeSymphonyOrchestra";
             showImage.setImageResource(R.drawable.orchestra);
         }
-        if (showNumber == 2) {
+        if (showNumber == 1) {
             showString = "Belonging";
+            showImage.setImageResource(R.drawable.belonging);
+        }
+        if (showNumber == 2) {
+            showString = "KidKoala";
+            showImage.setImageResource(R.drawable.kidkoala);
         }
         if (showNumber == 3) {
-            showString = "KidKoala";
-        }
-        if (showNumber == 4) {
             showString = "SouthwestVirginiaBallet";
             showImage.setImageResource(R.drawable.romeoandjuliet);
         }
-        if (showNumber == 5) {
+        if (showNumber == 4) {
             showString = "SecretAgent23Skidoo";
+            showImage.setImageResource(R.drawable.secretagenda23kiddo);
+        }
+        if (showNumber == 5) {
+            showString = "StuartPimslerDanceandTheater";
+            showImage.setImageResource(R.drawable.stuartpimsler);
         }
         if (showNumber == 6) {
-            showString = "StuartPimslerDanceandTheater";
+            showString = "NewYorkGilbertandSullivanPlayers";
+            showImage.setImageResource(R.drawable.gilbertsullivan);
         }
         if (showNumber == 7) {
-            showString = "NewYorkGilbertandSullivanPlayers";
+            showString = "WhatBends";
+            showImage.setImageResource(R.drawable.whatbends);
         }
         showTitle.setText(showParserJSON.getTitle(showString));
         showDate.setText(showParserJSON.getDate(showString));
+        if (type == 1) {
+            feedback.setText("Buy Tickets");
+        }
         showDescription.setText(showParserJSON.getDescription(showString));
         return rootView;
 
@@ -142,6 +156,7 @@ public class ShowFragment extends Fragment implements View.OnClickListener {
         }
         this.bundle = this.getArguments();
         showNumber = bundle.getInt("titleNumber");
+        type = bundle.getInt("type");
     }
 
     @Override
@@ -155,11 +170,21 @@ public class ShowFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.feedback:
                 // Pass the show title onto the feedback activity
-                Intent intent = new Intent(getActivity(), FeedbackActivity.class);
-                intent.putExtra("showString", showTitle.getText().toString());
-                System.out.println(showTitle.getText().toString());
-                startActivity(intent);
-                break;
+                if (type != 1) {
+                    Intent intent = new Intent(getActivity(), FeedbackActivity.class);
+                    intent.putExtra("showString", showTitle.getText().toString());
+                    System.out.println(showTitle.getText().toString());
+                    startActivity(intent);
+                    break;
+                }
+                else {
+                    Intent intent = new Intent(getActivity(), BuyTicketActivity.class);
+                    intent.putExtra("showString", showTitle.getText().toString());
+                    intent.putExtra("date", showDate.getText().toString());
+                    System.out.println(showTitle.getText().toString());
+                    startActivity(intent);
+                    break;
+                }
         }
     }
 
